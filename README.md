@@ -1,9 +1,4 @@
 # github_3
-
-Nirmala Aduri
-11:09 (0 minutes ago)
-to me
-
 // Express.js server code
 
 const express = require('express');
