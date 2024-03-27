@@ -31,3 +31,16 @@ app.get('/api/data', async (req, res) => {
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Endpoint to fetch data
+app.get('/api/data', async (req, res) => {
+  try {
+    const data = await YourDataModel.find();
+    res.json(data);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: 'Server Error' });
+  }
+});
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
